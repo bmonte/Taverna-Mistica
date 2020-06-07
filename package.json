@@ -57,6 +57,6 @@
   },
   "engines": {
     "node": "10.x",
-    "npm": "1.x"
+    "yarn": "1.x"
   }
 }
