@@ -1,8 +1,9 @@
 import 'reflect-metadata';
-
-import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
+import 'dotenv/config';
 
+import { errors } from 'celebrate';
+import express, { Request, Response, NextFunction } from 'express';
 import helmet from 'helmet';
 
 import AppError from '@shared/errors/AppError';
@@ -16,6 +17,7 @@ const app = express();
 app.use(helmet());
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {
