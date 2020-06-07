@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from 'express';
 import { verify } from 'jsonwebtoken';
 
 import AppError from '@shared/errors/AppError';
-import authConfig from '@config/auth';
 
 interface ITokenPayload {
   iat: string;
@@ -20,9 +19,12 @@ function ensureAuthenticated(
   if (!authHeader) throw new AppError('Token JWT is missing!', 401);
 
   const [, token] = authHeader.split(' ');
+  const secret = process.env.APP_SECRET;
+
+  if (!secret) throw new AppError('JWT Secret is missing!', 401);
 
   try {
-    const decoded = verify(token, authConfig.jwt.secret);
+    const decoded = verify(token, secret);
 
     const { sub } = decoded as ITokenPayload;
 
