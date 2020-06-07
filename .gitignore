@@ -67,9 +67,9 @@ typings/
 .env
 .env.test
 
-# tmp folder
-tmp/*
-!tmp/.gitkeep
+# images uploaded
+tmp/uploads/*
+!tmp/uploads/.gitkeep
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
