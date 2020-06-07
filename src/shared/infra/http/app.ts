@@ -1,7 +1,8 @@
 import 'reflect-metadata';
-import 'express-async-errors';
 
 import express, { Request, Response, NextFunction } from 'express';
+import 'express-async-errors';
+
 import helmet from 'helmet';
 
 import AppError from '@shared/errors/AppError';
