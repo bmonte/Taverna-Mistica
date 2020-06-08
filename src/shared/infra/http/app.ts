@@ -17,8 +17,8 @@ const app = express();
 
 app.use(helmet());
 
-app.use(express.json());
-app.use('/files', express.static(uploadConfig.tmpFolder));
+app.use(express.json({ limit: '5mb' }));
+app.use('/files', express.static(uploadConfig.uploadFolder));
 app.use(routes);
 
 app.use(errors());
