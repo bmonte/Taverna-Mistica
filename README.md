@@ -1,4 +1,6 @@
-<img alt="Taverna Mística" src="https://i.imgur.com/cLBhMLb.png)" />
+<p align="center">
+  <img alt="Taverna Mística" src="https://i.imgur.com/cLBhMLb.png)" />
+</p>
 
 <h3 align="center">
   API da aplicação Taverna Mística.
