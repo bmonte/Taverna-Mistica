@@ -61,7 +61,7 @@
   "id": "uuid",
   "username": "johndoe",
   "email": "johndoe@example.com",
-  "avatar": null | string,
+  "avatar": "null | string",
   "created_at": "2020-06-07T17:34:21.423Z",
   "updated_at": "2020-06-07T17:34:21.423Z"
 }
